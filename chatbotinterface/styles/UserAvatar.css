@@ -1,0 +1,17 @@
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #003057;
+  overflow: hidden;
+}
+
+.user-avatar img {
+  width: 24px;
+  height: 24px;
+  filter: invert(19%) sepia(98%) saturate(2262%) hue-rotate(187deg) brightness(96%) contrast(104%);
+}

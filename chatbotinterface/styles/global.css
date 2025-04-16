@@ -1,0 +1,35 @@
+:root {
+  --background-base: #f5f5f5;
+  --background: #ffffff;
+  --background-light: #f9f9f9;
+  
+  --text: #222222;
+  --text-subtle: #888888;
+  --text-light: #555555;
+  
+  --primary: #003057;
+  --secondary: #1c69d4;
+  --highlight: #2a609d;
+  --accent: #4c8abe;
+  
+  --button-primary: #003057;
+  --warning: #f7b500;
+  --error: #c61a09;
+  --success: #107c41;
+  
+  --border: #cccccc;
+  --border-subtle: #e5e5e5;
+  --hover: #e6e6e6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "VolvoNovumLight", Arial, sans-serif;
+  background-color: var(--background-base);
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}

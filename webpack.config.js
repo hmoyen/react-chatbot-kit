@@ -9,9 +9,7 @@ module.exports = (env, argv) => {
   const isDevelopment = argv.mode === 'development';
 
   return {
-    entry: process.env.NODE_ENV === 'development' 
-      ? path.resolve(__dirname, 'chatbotinterface/index.js') 
-      : path.resolve(__dirname, 'src/index.ts'),
+    entry: path.resolve(__dirname, 'chatbotinterface/index.js'),
     plugins: [
       new MiniCssExtractPlugin(),
       new webpack.DefinePlugin({

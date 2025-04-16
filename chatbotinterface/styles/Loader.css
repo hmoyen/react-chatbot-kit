@@ -1,0 +1,41 @@
+/* Loader container styling */
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000000; /* Adjust the color if needed */
+    animation: typing 1.4s infinite ease-in-out;
+  }
+  
+  .dot1 {
+    animation-delay: 0s;
+  }
+  
+  .dot2 {
+    animation-delay: 0.2s;
+  }
+  
+  .dot3 {
+    animation-delay: 0.4s;
+  }
+  
+  /* Typing animation effect */
+  @keyframes typing {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

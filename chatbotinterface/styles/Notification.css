@@ -1,0 +1,33 @@
+.notification {
+  background-color: var(--warning); /* Use global variable */
+  color: var(--text); /* Use global variable */
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 8px 0;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dismiss-button {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.dismiss-button:hover {
+  color: var(--highlight); /* Use global variable */
+}

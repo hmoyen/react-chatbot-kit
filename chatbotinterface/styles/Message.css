@@ -1,0 +1,107 @@
+/* General message container */
+.message {
+  position: relative;
+  max-width: 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Sent messages */
+.message.sent {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  border-top-right-radius: 0;
+}
+
+/* Received messages */
+.message.received {
+  align-self: flex-start;
+  background-color: white;
+  border-top-left-radius: 0;
+}
+
+/* System messages */
+.message.system {
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #575757;
+  font-style: italic;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  max-width: 80%;
+  text-align: center;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Message header */
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  color: #575757;
+}
+
+/* Message body */
+.message-body {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #212121;
+}
+
+/* Message timestamp */
+.message-timestamp {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.4);
+  align-self: flex-end;
+  margin-top: 0.25rem;
+  white-space: nowrap;
+}
+
+/* Attachments */
+.attachment img {
+  max-width: 100%;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.attachment a {
+  color: #2a609d;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.attachment a:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover state for timestamps */
+.message:hover .message-timestamp {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .message {
+    max-width: 90%;
+  }
+}

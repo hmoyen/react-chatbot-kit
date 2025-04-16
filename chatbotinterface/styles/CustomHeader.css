@@ -1,0 +1,22 @@
+.custom-header {
+  display: flex;
+  align-items: center;
+  background-color: #161618;
+  padding: 10px 15px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.custom-header .logo {
+  height: 30px;
+  margin-right: 15px;
+}
+
+.custom-header .header-text {
+  color: #fff;
+}
+
+.custom-header .header-text h3 {
+  margin: 0;
+  font-weight: 500;
+}

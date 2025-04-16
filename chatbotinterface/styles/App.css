@@ -1,0 +1,72 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.main-nav {
+  background-color: #003057;
+  padding: 1rem;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "VolvoNovumLight", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.main-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.welcome-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  font-size: 2rem;
+  font-family: "VolvoNovumLight", Arial, sans-serif;
+  color: #003057;
+}
+
+.chatbot-container {
+  width: 350px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 999;
+  animation: slide-up 0.3s ease;
+  background-color: white;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.livechat-container {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 999;
+  animation: slide-up 0.3s ease;
+}

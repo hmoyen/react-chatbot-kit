@@ -1,0 +1,73 @@
+.message-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 1.25rem;
+  outline: none;
+  font-size: 0.875rem;
+  font-family: "VolvoNovumLight", Arial, sans-serif;
+  transition: border-color 0.2s;
+}
+
+.message-input input:focus {
+  border-color: #2a609d;
+}
+
+.message-input input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.attachment-icon {
+  color: #575757;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attachment-icon:hover {
+  color: #2a609d;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.send-button {
+  background-color: #2a609d;
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: none;
+  padding: 0;
+}
+
+.send-button:hover {
+  background-color: #224f82;
+}
+
+.send-button:active {
+  transform: scale(0.95);
+}

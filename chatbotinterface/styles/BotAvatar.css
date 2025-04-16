@@ -1,0 +1,16 @@
+.bot-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #003057;
+}
+
+.bot-avatar img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
