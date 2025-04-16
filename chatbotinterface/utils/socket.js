@@ -3,14 +3,15 @@ import { io } from "socket.io-client";
 
 // Dynamically determine the WebSocket server URL
 const getWebSocketURL = () => {
-  if (process.env.REACT_APP_BACKEND_URL) {
-    return process.env.REACT_APP_BACKEND_URL.replace(/^http/, "ws");
+  const backendUrl = (typeof process !== "undefined" && process?.env?.REACT_APP_BACKEND_URL) || "http://localhost:6000";
+  if (backendUrl) {
+    return backendUrl.replace(/^http/, "ws");
   }
   if (window.location.hostname.includes("github.dev")) {
     // Ensure the WebSocket URL uses port 5000
-    return `wss://${window.location.hostname.replace("-3000", "-5000")}`;
+    return `wss://${window.location.hostname.replace("-8080", "-6000")}`;
   }
-  return "ws://localhost:5000"; // Default for local development
+  return "ws://localhost:6000"; // Default for local development
 };
 
 const serverUrl = getWebSocketURL();
@@ -33,7 +34,10 @@ socket.on("connect", () => {
 });
 
 socket.on("disconnect", (reason) => {
-  console.log(`[SOCKET LOG]: Disconnected from server. Reason: ${reason}`);
+  console.warn(`[SOCKET LOG]: Disconnected from server. Reason: ${reason}`);
+  if (reason === "io server disconnect") {
+    socket.connect(); // Attempt to reconnect if the server disconnects
+  }
 });
 
 socket.on("connect_error", (error) => {

@@ -13,8 +13,9 @@ module.exports = (env, argv) => {
     plugins: [
       new MiniCssExtractPlugin(),
       new webpack.DefinePlugin({
+        'process.env': JSON.stringify(process.env), // Inject all environment variables
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-        'process.env.SOCKET_SERVER_URL': JSON.stringify(process.env.SOCKET_SERVER_URL || 'http://localhost:5000'),
+        'process.env.SOCKET_SERVER_URL': JSON.stringify(process.env.SOCKET_SERVER_URL || 'http://localhost:6000'),
       }),
       new HtmlWebpackPlugin({
         template: './public/index.html',
@@ -50,9 +51,9 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
-          type: isDevelopment ? 'asset/resource' : 'asset',
+          type: 'asset/resource',
           generator: {
-            filename: isDevelopment ? '[path][name][ext]' : 'static/fonts/[name].[hash:8].[ext]',
+            filename: 'static/fonts/[name][ext]',
           },
         },
       ],

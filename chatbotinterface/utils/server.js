@@ -1,7 +1,7 @@
+require("dotenv").config(); // Load environment variables from .env file
 const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
-require("dotenv").config();
 
 const app = express();
 const server = http.createServer(app);
@@ -75,9 +75,11 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(5000, () => {
+const PORT = process.env.PORT || 6000; // Use PORT from .env or default to 6000
+
+server.listen(PORT, () => {
   const host = process.env.CODESPACE_NAME
-    ? `https://\${process.env.CODESPACE_NAME}-5000.app.github.dev`
-    : "http://localhost:5000";
+    ? `https://${process.env.CODESPACE_NAME}-${PORT}.app.github.dev`
+    : `http://localhost:${PORT}`;
   console.log(`Server is running on ${host}`);
 });

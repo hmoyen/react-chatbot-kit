@@ -17,7 +17,7 @@ function App() {
   const [showLiveChat, setShowLiveChat] = useState(false);
 
   const toggleBot = () => {
-    setShowBot(prev => !prev);
+    setShowBot((prev) => !prev); // Correctly toggle the state
     if (showLiveChat) setShowLiveChat(false);
   };
 

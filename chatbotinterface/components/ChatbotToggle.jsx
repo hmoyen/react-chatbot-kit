@@ -9,7 +9,7 @@ const ChatbotToggle = ({ onClick, isOpen }) => {
       aria-label="Toggle Chatbot"
     >
       <img 
-        src="/icons/R2D2.png" 
+        src="/assets/icons/R2D2.png" 
         alt="Chatbot" 
         className="toggle-icon"
       />

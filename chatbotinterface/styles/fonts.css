@@ -1,12 +1,12 @@
 @font-face {
   font-family: "VolvoNovumLight";
-  src: url("/assets/fonts/Volvo_Novum_Light.ttf") format("truetype");
+  src: url("../../assets/fonts/Volvo_Novum_Light.ttf") format("truetype");
 }
 
 /* VolvoBroad font warnings are non-critical and can be ignored. */
 @font-face {
   font-family: "VolvoBroad";
-  src: url("/assets/fonts/VolvoBroad.ttf") format("truetype");
+  src: url("../../assets/fonts/VolvoBroad.ttf") format("truetype");
 }
 
 body {
